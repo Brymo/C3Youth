@@ -63,15 +63,15 @@ body{
     font-family: "Lemon";
     font-size: 2rem;
 
-    transition: all 0.8s ease;
+    transition: all 0.4s ease, padding 0.2s ease 0.1s;
 
     cursor: pointer;
 }
 
-body .panel .door:not(.door.locked):hover{
-    margin:var(--thirdPad);
-    height:calc(100% - 2*var(--thirdPad));
+body .panel .door:not(.locked):hover{
+    padding-bottom: 2rem;
 }
+
 
 .door.locked{
     filter: grayscale(100%);
