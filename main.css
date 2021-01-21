@@ -63,12 +63,19 @@ body{
     font-family: "Lemon";
     font-size: 2rem;
 
-    transition: all 0.2s ease;
+    transition: all 0.8s ease;
+
+    cursor: pointer;
 }
 
 body .panel .door:not(.door.locked):hover{
-    margin:0;
-    height:100%;
+    margin:var(--thirdPad);
+    height:calc(100% - 2*var(--thirdPad));
+}
+
+.door.locked{
+    filter: grayscale(100%);
+    cursor: default;
 }
 
 .panel.one .door{
@@ -77,12 +84,15 @@ body .panel .door:not(.door.locked):hover{
 }
 
 .panel.two .door{
+    background-image: url(images/rocks.jpg);
     margin:var(--fullPad) var(--thirdPad) var(--fullPad) var(--twoThirdPad) ;
 }
 .panel.three .door{
+    background-image: url(images/rocks.jpg);
     margin:var(--fullPad) var(--twoThirdPad) var(--fullPad) var(--thirdPad) ;
 }
 .panel.four .door{
+    background-image: url(images/rocks.jpg);
     margin:var(--fullPad) var(--sidePad) var(--fullPad) 0 ;
 }
 
