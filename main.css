@@ -1,0 +1,92 @@
+:root{
+    --fullPad: 4vw;    
+    --sidePad: calc(var(--fullPad) + calc(var(--fullPad)/2));
+    --thirdPad: calc(var(--sidePad)/3);
+    --twoThirdPad: calc(2*var(--sidePad)/3);
+}
+
+body{
+    margin: 0;
+}
+
+
+*{
+    box-sizing:border-box;
+}
+
+
+.layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.panel{
+    width:100%;
+    height:100vh;
+    background-color: #FEFEFE;
+    transition: all 0.2s ease-out; 
+}
+
+
+.one{
+    grid-column: 1/span 1;
+}
+
+.two{
+    grid-column: 2/span 1;
+}
+
+.three{
+    grid-column: 3/span 1;
+}
+
+.four{
+    grid-column: 4/span 1;
+}
+
+
+.door{
+    background-color: #333;
+    height:calc(100% - var(--fullPad)*2);
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    color: #FEFEFE;
+    font-family: "Lemon";
+    font-size: 2rem;
+
+    transition: all 0.2s ease;
+}
+
+body .panel .door:hover{
+    margin:0;
+    height:100%;
+}
+
+.panel.one .door{
+    background-image: url(images/rocks.jpg);
+    margin:var(--fullPad) 0 var(--fullPad) var(--sidePad) ;
+}
+
+.panel.two .door{
+    margin:var(--fullPad) var(--thirdPad) var(--fullPad) var(--twoThirdPad) ;
+}
+.panel.three .door{
+    margin:var(--fullPad) var(--twoThirdPad) var(--fullPad) var(--thirdPad) ;
+}
+.panel.four .door{
+    margin:var(--fullPad) var(--sidePad) var(--fullPad) 0 ;
+}
+
+@font-face{
+    font-family: Lemon;
+    src:url("font/lemon.woff")
+}
