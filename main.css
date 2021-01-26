@@ -15,62 +15,163 @@ body{
 }
 
 
-.layout{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+@media (max-width:700px){
+    .layout{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .one{
+        grid-row: 1/span 1;
+        grid-column: 1/span 1;
+    }
+
+    .two{
+        grid-row: 2/span 1;
+        grid-column: 1/span 1;
+    }
+
+    .three{
+        grid-row: 3/span 1;
+        grid-column: 1/span 1;
+    }
+
+    .four{
+        grid-row: 4/span 1;
+        grid-column: 1/span 1;
+    }
+    .door{
+        background-color: #333;
+        width: 90%;
+        height: 80%;
+        
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+
+        color: #FEFEFE;
+        font-family: "Lemon";
+        font-size: 2rem;
+
+        border-radius: 1vw;
+
+        transition: all 0.2s ease-in, padding 0.2s ease-in 0.1s;
+        box-shadow: 0px 8px 6px -6px black;
+
+        padding-left: 1em;
+
+        cursor: pointer;
+    }
+    .panel{
+        width:100%;
+        height:25vh;
+        background-color: #FEFEFE;
+        transition: all 0.2s ease-out; 
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .panel.one .door{
+        background-image: url(images/rocks.jpg);
+    }
+
+    .panel.two .door{
+        background-image: url(images/rocks.jpg);
+    }
+    .panel.three .door{
+        background-image: url(images/rocks.jpg);
+    }
+    .panel.four .door{
+        background-image: url(images/rocks.jpg);
+    }
 }
 
-.panel{
-    width:100%;
-    height:100vh;
-    background-color: #FEFEFE;
-    transition: all 0.2s ease-out; 
+@media (min-width:701px){
+    .door{
+        background-color: #333;
+        height:calc(100% - var(--fullPad)*2);
+        
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+
+        color: #FEFEFE;
+        font-family: "Lemon";
+        font-size: 2rem;
+
+        border-radius: 1vw;
+
+
+        transition: all 0.2s ease-in, padding 0.2s ease-in 0.1s;
+        box-shadow: 0px 8px 6px -6px black;
+
+
+        cursor: pointer;
+    }
+
+    .layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .one{
+        grid-column: 1/span 1;
+    }
+
+    .two{
+        grid-column: 2/span 1;
+    }
+
+    .three{
+        grid-column: 3/span 1;
+    }
+
+    .four{
+        grid-column: 4/span 1;
+    }
+
+    .panel{
+        width:100%;
+        height:100vh;
+        background-color: #FEFEFE;
+        transition: all 0.2s ease-out; 
+    }
+    .panel.one .door{
+        background-image: url(images/rocks.jpg);
+        margin:var(--fullPad) 0 var(--fullPad) var(--sidePad) ;
+    }
+
+    .panel.two .door{
+        background-image: url(images/rocks.jpg);
+        margin:var(--fullPad) var(--thirdPad) var(--fullPad) var(--twoThirdPad) ;
+    }
+    .panel.three .door{
+        background-image: url(images/rocks.jpg);
+        margin:var(--fullPad) var(--twoThirdPad) var(--fullPad) var(--thirdPad) ;
+    }
+    .panel.four .door{
+        background-image: url(images/rocks.jpg);
+        margin:var(--fullPad) var(--sidePad) var(--fullPad) 0 ;
+    }
+    body .panel .door:not(.locked):hover{
+        padding-bottom: 2rem;
+        border-radius: 0vw;
+        transform: scale(1.04);
+    }
 }
 
 
-.one{
-    grid-column: 1/span 1;
-}
-
-.two{
-    grid-column: 2/span 1;
-}
-
-.three{
-    grid-column: 3/span 1;
-}
-
-.four{
-    grid-column: 4/span 1;
-}
-
-
-.door{
-    background-color: #333;
-    height:calc(100% - var(--fullPad)*2);
-    
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-
-    color: #FEFEFE;
-    font-family: "Lemon";
-    font-size: 2rem;
-
-    transition: all 0.4s ease, padding 0.2s ease 0.1s;
-
-    cursor: pointer;
-}
-
-body .panel .door:not(.locked):hover{
-    padding-bottom: 2rem;
-}
 
 
 .door.locked{
@@ -78,23 +179,6 @@ body .panel .door:not(.locked):hover{
     cursor: default;
 }
 
-.panel.one .door{
-    background-image: url(images/rocks.jpg);
-    margin:var(--fullPad) 0 var(--fullPad) var(--sidePad) ;
-}
-
-.panel.two .door{
-    background-image: url(images/rocks.jpg);
-    margin:var(--fullPad) var(--thirdPad) var(--fullPad) var(--twoThirdPad) ;
-}
-.panel.three .door{
-    background-image: url(images/rocks.jpg);
-    margin:var(--fullPad) var(--twoThirdPad) var(--fullPad) var(--thirdPad) ;
-}
-.panel.four .door{
-    background-image: url(images/rocks.jpg);
-    margin:var(--fullPad) var(--sidePad) var(--fullPad) 0 ;
-}
 
 @font-face{
     font-family: Lemon;
