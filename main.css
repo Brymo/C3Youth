@@ -15,7 +15,7 @@ body{
 }
 
 
-@media (max-width:700px){
+@media (max-width:700px) {
     .layout{
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -77,9 +77,6 @@ body{
         flex-direction: column;
     }
     .panel.one .door{
-
-        font-size: 1.5rem;
-
         background-image: url(images/TERM1_mobile.jpg);
         background-attachment:local;
         background-position: center;
