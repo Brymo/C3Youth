@@ -51,7 +51,7 @@ body{
         justify-content: flex-start;
         align-items: center;
         
-        background-attachment: fixed;
+        background-attachment:local;
         background-position: center;
         background-size: cover;
 
@@ -80,19 +80,39 @@ body{
     }
     .panel.one .door{
         background-image: url(images/TERM1_mobile.jpg);
-        background-attachment:local;
-        background-position: center;
-        background-size: cover;
     }
 
-    .panel.two .door{
-        background-image: url(images/rocks.jpg);
+    /*.panel.two .door{
+        background-image: url(images/locked_mobile.jpg);
     }
     .panel.three .door{
-        background-image: url(images/rocks.jpg);
+        background-image: url(images/locked_mobile.jpg);
     }
     .panel.four .door{
-        background-image: url(images/rocks.jpg);
+        background-image: url(images/locked_mobile.jpg);
+    }*/
+
+    .door.locked{
+        background-image: url(images/locked_desktop.jpg);
+        cursor: default;
+    }
+
+    .locked .comingSoon{
+        font-family: AkiraEx;
+        display:flex;
+        align-items: center;
+        position:absolute;
+        right: 4.5rem;
+
+        width: 20%;
+
+        text-align: right;
+
+        font-size:1rem;
+    }
+
+    .locked img{
+        display:none;
     }
 }
 
@@ -106,13 +126,13 @@ body{
         align-items: center;
         flex-direction: column;
         
-        background-attachment: fixed;
+        background-attachment:local;
         background-position: center;
         background-size: cover;
 
         color: #FEFEFE;
         font-family: "Lemon";
-        font-size: 2rem;
+        font-size: 1.7vw;
 
         border-radius: 1vw;
 
@@ -155,38 +175,60 @@ body{
         transition: all 0.2s ease-out; 
     }
     .panel.one .door{
-        background-image: url(images/rocks.jpg);
+        background-image: url(images/TERM1_desktop.jpg);
         margin:var(--fullPad) 0 var(--fullPad) var(--sidePad) ;
+
+        background-attachment:local;
+        background-position: center;
+        background-size: cover;
     }
 
     .panel.two .door{
-        background-image: url(images/rocks.jpg);
         margin:var(--fullPad) var(--thirdPad) var(--fullPad) var(--twoThirdPad) ;
     }
     .panel.three .door{
-        background-image: url(images/rocks.jpg);
         margin:var(--fullPad) var(--twoThirdPad) var(--fullPad) var(--thirdPad) ;
     }
     .panel.four .door{
-        background-image: url(images/rocks.jpg);
         margin:var(--fullPad) var(--sidePad) var(--fullPad) 0 ;
     }
     body .panel .door:not(.locked):hover{
         padding-bottom: 2rem;
         border-radius: 0vw;
     }
+
+    .door.locked{
+        background-image: url(images/locked_desktop.jpg);
+        cursor: default;
+    }
+
+    .locked .comingSoon{
+        font-family: AkiraEx;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        position:absolute;
+        top:25%
+    }
+
+    .locked img{
+        width:4vw;
+        margin-bottom:1.5rem;
+    }
 }
 
 
 
 
-.door.locked{
-    filter: grayscale(100%);
-    cursor: default;
-}
 
 
 @font-face{
     font-family: Lemon;
     src:url("font/lemon.woff")
+}
+
+@font-face{
+    font-family: AkiraEx;
+    src:url("font/AkiraEx.woff")
 }
