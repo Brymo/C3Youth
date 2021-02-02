@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+}
+
+.center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing{
+    z-index: -1;
+    height:95vh;
+    width: 100vw;
+
+    position: relative;
+
+    background-image: url(../images/orange\ paper.png);
+}
+
+.landingImg{
+    width:55vw;
+}
+
+.landing .barcode{
+    position:absolute;
+    bottom: 3rem;
+    left: 2rem;
+}
+
+.landing .BD{
+
+    width:12vw;
+
+    position:absolute;
+    top: 3rem;
+    right: 0rem;
+}
+
+.info{
+
+    height:140vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: white;
+
+}
+
+.paperback{
+    background-size: cover;
+    width:50vw;
+
+    z-index: 2;
+    margin-top: -4vh;
+    background-image: url(../images/paperback.png);
+}
+
+.writing{
+
+    position: relative;
+    top: 10vh;
+    left:7vw;
+
+    width: 80%;
+    height: 80%;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.event{
+    margin: 1rem 0;
+}
+
+.event .title{
+    font-size: 1.5vw;
+    font-family: AkiraEx;
+}
+
+.event .description{
+    font-size: 0.9vw;
+    font-family: AkiraEx;
+}
+
+.campaignTitle{
+    font-size: 2.1vw;
+    font-family: AkiraEx;
+}
+
+
+.crossRoads{
+
+    width: 100vw;
+    height:30vh;
+    background-color: black;
+}
+
+#CIRCLESPIN{
+    width: 40vw;
+    height:40vw;
+
+    position:absolute;
+    right: -20vw;
+    top: 130vh;
+
+}
+
+/*.slide{
+    border:2px solid black;
+    width: 10%;
+    height : 10rem;
+
+
+    position: sticky;
+    top: 2rem;
+    right:-100rem;
+}*/
+
+body{
+    margin:0;
+    overflow-x: hidden;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@font-face{
+    font-family: AkiraEx;
+    src:url("../font/AkiraEx.woff")
+}
+
+
+
