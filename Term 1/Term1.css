@@ -39,6 +39,8 @@
 
 .info{
 
+    position: relative;
+
     height:140vh;
     width: 100vw;
 
@@ -107,20 +109,55 @@
 
     position:absolute;
     right: -20vw;
-    top: 130vh;
+    top: 30vh;
 
 }
 
-/*.slide{
-    border:2px solid black;
-    width: 10%;
-    height : 10rem;
+.slideContainer{
+    position: absolute;
 
+    height: 140vh;
+
+    left: 6vw;
+    top: 2rem;
+}
+
+.slideRail{
+    position: relative;
+    height: 100%;
+}
+
+
+.slide{
+    border:2px solid black;
+    width: 15vw;
+
+    margin: 0 0 12vh 0;
 
     position: sticky;
-    top: 2rem;
-    right:-100rem;
-}*/
+    top: 4rem;
+
+    display:flex;
+    flex-direction: column;
+
+    padding:0 1rem 1rem 1rem;
+
+    font-family: "Helvetica Neue",Helvetica ,Arial, sans-serif
+}
+
+.slide .title{
+    width: 100%;
+    text-align: center;
+}
+
+.slide :nth-child(n+1){
+    margin-top: 1rem;
+}
+
+.slide :nth-child(2n){
+    font-weight: bold;
+}
+
 
 body{
     margin:0;
