@@ -8,159 +8,360 @@
     align-items: center;
 }
 
-.landing{
-    z-index: -1;
-    height:95vh;
-    width: 100vw;
+@media (min-width: 1030px){
 
-    position: relative;
+    #TOPBAR{
+        display: none;
+    }
 
-    background-image: url(../images/orange\ paper.png);
+    .landing{
+        z-index: -1;
+        height:45vw;
+        width: 100vw;
+
+        position: relative;
+
+        background-image: url(../images/orange\ paper.png);
+    }
+
+    .landingImg{
+        width:50vw;
+        position: relative;
+        top: -3vh;
+    }
+
+    .landing .barcode{
+        position:absolute;
+        bottom: 3rem;
+        left: 2rem;
+    }
+
+    .landing .BD{
+
+        width:12vw;
+
+        position:absolute;
+        top: 3rem;
+        right: 0rem;
+    }
+
+    .info{
+
+        position: relative;
+
+        height:80vw;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+
+
+        box-shadow: 0px 10px 10px -10px black;
+
+    }
+
+    .paperback{
+        background-size: contain;
+        background-repeat: no-repeat;
+        width:50vw;
+
+        z-index: 2;
+        margin-top: -4vh;
+
+        
+        background-position: center top;
+        background-image: url(../images/paperback.png);
+
+    }
+
+    .writing{
+
+        position: relative;
+        top: 10vh;
+        left:7vw;
+
+        width: 80%;
+        height: 80%;
+
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-bottom: 10rem;
+    }
+
+    .event{
+        margin: 1rem 0;
+    }
+
+    .event .title{
+        font-size: 1.5vw;
+        font-family: AkiraEx;
+    }
+
+    .event .description{
+        font-size: 0.9vw;
+        font-family: AkiraEx;
+    }
+
+    .campaignTitle{
+        font-size: 2.1vw;
+        font-family: AkiraEx;
+    }
+
+    .crossRoads{
+
+        width: 100vw;
+        height:20vw;
+        background-color: black;
+        background-image: url("../images/Crossroads.png");
+
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+
+    #CIRCLESPIN{
+        width: 40vw;
+        height:40vw;
+
+
+        position: absolute;
+        top: 18vw;
+        right: -20vw;
+
+    }
+
+    .slideContainer{
+        position: absolute;
+
+
+        left: 5vw;
+        top: 2rem;
+    }
+
+    .slideRail{
+        position: relative;
+        height: calc(100vw * 1.7);
+
+
+    }
+
+
+    .slide{
+        border:2px solid black;
+        width: 17vw;
+
+        margin: 0 0 12vh 0;
+
+        position: sticky;
+        top: 4rem;
+
+        display:flex;
+        flex-direction: column;
+
+        padding:0 1.2vw 1.2vw 1.2vw;
+
+        font-size: 1vw;
+
+        font-family: "Helvetica Neue",Helvetica ,Arial, sans-serif;
+        opacity: 0.8;
+
+        background-color: white;
+    }
+
+    .slide .title{
+        width: 100%;
+        text-align: center;
+    }
+
+    .slide :nth-child(n+1){
+        margin-top: 1rem;
+    }
+
+    .slide :nth-child(2n){
+        font-weight: bold;
+    }
+
 }
 
-.landingImg{
-    width:55vw;
+@media (max-width: 1029px){
+
+    #TOPBAR{
+        width:100vw;
+        height: 2.5rem;
+
+        background-color: #222;
+        position:fixed;
+        top:0;
+        z-index: 3;
+
+        display:flex;
+
+
+        overflow: hidden;
+    }
+
+    #NORTH,#WEST{
+        height: 2.5vw;
+        color: whitesmoke;
+        font-family: "Helvetica Neue",Helvetica ,Arial, sans-serif;
+        font-weight: bold;
+        font-size: 2.5vw;
+        z-index: 4;
+    }
+
+
+    .landing{
+        z-index: -1;
+        height:90vh;
+        width: 100vw;
+
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+
+        background-image: url(../images/orange\ paper.png);
+    }
+
+    .landingImg{
+        width:80vw;
+        position: relative;
+        top: -3vh;
+    }
+
+    .landing .barcode{
+        position: absolute;
+        bottom: 5vh;
+
+        width: 20vw;
+    }
+
+    .landing .BD{
+       display: none; 
+    }
+
+    .info{
+
+        position: relative;
+
+        height:130vw;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+
+        box-shadow: 0px 10px 10px -10px black;
+
+    }
+
+    .paperback{
+        background-size: contain;
+        width:90vw;
+        height: 100%;
+
+        background-repeat: no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        background-position: center top;
+
+        z-index: 2;
+        margin-top: -4vh;
+        background-image: url(../images/paperback.png);
+    }
+
+    .writing{
+        position: relative;
+        top: 10vh;
+
+        width: 80%;
+        height: 70%;
+
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+
+        padding-top: 0vw;
+
+        margin-top: -4vh; /*To account for the parent being suck up*/
+    }
+
+    .event{
+        margin: 1rem 0;
+    }
+
+    .event .title{
+        font-size: 3vw;
+        font-family: AkiraEx;
+    }
+
+    .event .description{
+        font-size: 1.8vw;
+        font-family: AkiraEx;
+    }
+
+    .campaignTitle{
+        font-size: 4.2vw;
+        font-family: AkiraEx;
+    }
+
+    .crossRoads{
+
+        width: 100vw;
+        height:30vh;
+        background-color: black;
+        background-image: url("../images/Crossroads.png");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    #CIRCLESPIN{
+
+        display: none;
+        width: 40vw;
+        height:40vw;
+
+        position:absolute;
+        right: -20vw;
+        top: 30vh;
+
+    }
+
+    .slideContainer{
+        display: none;
+    }
+    
+    #TOPBAR div{
+        transition: all 0.2s ease-out;
+        display: none;
+    }
+
+    #TOPBAR div.topShowing{
+        display:inline;
+    }
+
 }
 
-.landing .barcode{
-    position:absolute;
-    bottom: 3rem;
-    left: 2rem;
-}
-
-.landing .BD{
-
-    width:12vw;
-
-    position:absolute;
-    top: 3rem;
-    right: 0rem;
-}
-
-.info{
-
-    position: relative;
-
-    height:140vh;
-    width: 100vw;
-
-    display: flex;
-    justify-content: center;
-
-    background-color: white;
-
-}
-
-.paperback{
-    background-size: cover;
-    width:50vw;
-
-    z-index: 2;
-    margin-top: -4vh;
-    background-image: url(../images/paperback.png);
-}
-
-.writing{
-
-    position: relative;
-    top: 10vh;
-    left:7vw;
-
-    width: 80%;
-    height: 80%;
-
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.event{
-    margin: 1rem 0;
-}
-
-.event .title{
-    font-size: 1.5vw;
-    font-family: AkiraEx;
-}
-
-.event .description{
-    font-size: 0.9vw;
-    font-family: AkiraEx;
-}
-
-.campaignTitle{
-    font-size: 2.1vw;
-    font-family: AkiraEx;
-}
-
-
-.crossRoads{
-
-    width: 100vw;
-    height:30vh;
-    background-color: black;
-}
-
-#CIRCLESPIN{
-    width: 40vw;
-    height:40vw;
-
-    position:absolute;
-    right: -20vw;
-    top: 30vh;
-
-}
-
-.slideContainer{
-    position: absolute;
-
-    height: 140vh;
-
-    left: 6vw;
-    top: 2rem;
-}
-
-.slideRail{
-    position: relative;
-    height: 100%;
-}
-
-
-.slide{
-    border:2px solid black;
-    width: 15vw;
-
-    margin: 0 0 12vh 0;
-
-    position: sticky;
-    top: 4rem;
-
-    display:flex;
-    flex-direction: column;
-
-    padding:0 1rem 1rem 1rem;
-
-    font-family: "Helvetica Neue",Helvetica ,Arial, sans-serif
-}
-
-.slide .title{
-    width: 100%;
-    text-align: center;
-}
-
-.slide :nth-child(n+1){
-    margin-top: 1rem;
-}
-
-.slide :nth-child(2n){
-    font-weight: bold;
-}
 
 
 body{
+
+    width:100vw;
     margin:0;
+
     overflow-x: hidden;
 
     display: flex;
