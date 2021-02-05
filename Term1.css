@@ -248,7 +248,7 @@
 
         flex-direction: column;
 
-        background-image: url("../images/orange\ paper.png");
+        background-image: url("./images/orange\ paper.png");
     }
 
     .landingImg{
@@ -297,7 +297,7 @@
 
         z-index: 2;
         margin-top: -4vh;
-        background-image: url("../images/paperback.png");
+        background-image: url("./images/paperback.png");
     }
 
     .writing{
@@ -348,7 +348,7 @@
         width: 100vw;
         height:30vh;
         background-color: black;
-        background-image: url("../images/Crossroads.png");
+        background-image: url("./images/Crossroads.png");
 
         background-size: cover;
         background-position: center;
