@@ -56,8 +56,14 @@
         justify-content: center;
 
 
-        box-shadow: 0px 10px 10px -10px black;
 
+    }
+
+    .bottomShadow{
+        box-shadow: 0px 10px 10px -10px black;
+    }
+    .topShadow{
+        box-shadow: 0px -10px 10px -10px black;
     }
 
     .paperback{
@@ -89,6 +95,7 @@
         justify-content: space-between;
 
         padding-bottom: 10rem;
+        transform: rotate(359deg);
     }
 
     .event{
@@ -98,6 +105,10 @@
     .event .title{
         font-size: 1.5vw;
         font-family: AkiraEx;
+        text-align: center;
+
+        margin-bottom: 1.5vw;
+        text-decoration: underline;
     }
 
     .event .description{
@@ -205,12 +216,21 @@
         overflow: hidden;
     }
 
-    #NORTH,#WEST{
+    #WEST{
         height: 2.5vw;
         color: whitesmoke;
         font-family: "Helvetica Neue",Helvetica ,Arial, sans-serif;
         font-weight: bold;
         font-size: 2.5vw;
+        z-index: 4;
+    }
+
+    #NORTH{
+        height: 2.5vw;
+        color: whitesmoke;
+        font-family: "Helvetica Neue",Helvetica ,Arial, sans-serif;
+        font-weight: bold;
+        font-size: 2.3vw;
         z-index: 4;
     }
 
@@ -296,6 +316,8 @@
         padding-top: 0vw;
 
         margin-top: -4vh; /*To account for the parent being suck up*/
+
+        transform: rotate(359deg);
     }
 
     .event{
@@ -305,6 +327,10 @@
     .event .title{
         font-size: 3vw;
         font-family: AkiraEx;
+        text-align: center;
+        margin-bottom: 3vw;
+
+        text-decoration: underline;
     }
 
     .event .description{
@@ -355,7 +381,18 @@
 
 }
 
+.fluroFlash{
+    animation-name: fluro;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
 
+@keyframes fluro{
+    0% {color:black}
+    25% {color:#6F6}
+    75% {color:#6F6}
+    100% {color:black}
+}
 
 body{
 
