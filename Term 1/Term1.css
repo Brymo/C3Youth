@@ -1,3 +1,20 @@
+/**
+    IMPORTANT NOTE:  If you are searching this file for class/ID names you've found in the index.html, there's likely TWO
+                     instances of the class/ID in here.  One for mobile and one for desktop.
+
+    You'll want to know how FlexBox works and position relative,absolute and sticky before you tackle this.
+    Here are some really good resources:
+    
+    Flexbox: https://flexboxfroggy.com/
+    Position: https://developer.mozilla.org/en-US/docs/Web/CSS/position
+
+    Position is a bit to get your head around if you're new to css but you'll get there I believe in you 
+*/
+
+/*
+    border-box is applied everything.  Just a preference feel free to change this
+    https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing 
+*/
 *{
     box-sizing: border-box;
 }
@@ -8,6 +25,9 @@
     align-items: center;
 }
 
+/**
+    CSS that's applied for desktop
+*/
 @media (min-width: 1030px){
 
     #TOPBAR{
@@ -54,8 +74,6 @@
 
         display: flex;
         justify-content: center;
-
-
 
     }
 
@@ -199,6 +217,9 @@
 
 }
 
+/**
+    CSS that's applied for mobile
+*/
 @media (max-width: 1029px){
 
     #TOPBAR{
@@ -361,7 +382,7 @@
         height:40vw;
 
         position:absolute;
-        right: -20vw;
+        right: -20vw; /*This lets us hide half of the logo*/
         top: 30vh;
 
     }

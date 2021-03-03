@@ -1,0 +1,217 @@
+<!--
+  Hello! Thanks for contributing to the youth website you are very cool :)
+   
+  The C3 Youth website is our very first web project as C3 Youth SYD overseen by Bryan Moh (@Brymo)
+  If you have any questions about the site (e.g. feature requests, you would like to be added as a collaborator), talk to Bryan
+
+  If you want to learn how to learn how to code or add to this site feel free to contact Bryan too! 
+
+  Before you read on you'll want to have some experience with HTML and CSS.
+-->
+
+<!-- Contributors to this page (add your name here for street cred)
+  Jodeci Dunick
+  Bryan Moh
+  Lucy Laidlaw
+  Vanessa Chan
+-->
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>C3 SYD Youth</title>
+  <meta name="description" content="C3 Youth - Term 2">
+  <meta name="author" content="C3 Youth">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- This styles this page with Term1.css-->
+  <link rel="stylesheet" href="Term2.css">
+
+</head>
+
+<body>
+
+  <!--
+    The topbar shows when on a mobile sized screen.  
+    Shrink your screen to a small size if you are on desktop to see this.
+
+    Term1.js's switch location text function handles the switching  
+  -->
+  <div id="TOPBAR" class="center">
+    <div id="NORTH" >
+        NORTH (NORTHERN BEACHES) MEET AT: C3 OXFORD FALLS, 6:30PM EVERY FRIDAY
+    </div>
+    <div id="WEST" class="topShowing">
+        WEST (WEST SYDNEY) MEET AT: C3 SILVERWATER, 6:30PM EVERY FRIDAY
+    </div>
+  </div>
+
+
+  <!--
+    The big orange landing image that is the first thing people see
+
+    TODO: This is the "landing" graphic so it'll need to be changed in between terms
+  -->
+  <div class="landing center">
+    <img class="BD" src="./images/BD.png"></img>
+    <img class="landingImg" src="./images/FullLogo.png"></img>
+    <img class="barcode" src="./images/BAR CODE.png">
+  </div>
+
+
+  <!--
+    the info class is used to contain the information "layers" of the page 
+  -->
+  <div class="info bottomShadow">
+
+    <!--
+      SlideContainer contains the element that vertically slides across the screen as the user scrolls
+      It's a lot bigger than the container that it's in and this allows it's element to break out of the parent container 
+      ^^^I didn't know how to word this...it'll be easier to understand if you hit F12 in your browser and inspect that element
+    -->
+    <div class="slideContainer">
+      <div class="slideRail">
+        <div class="slide">
+          <div class="title">WHERE WE MEET</div>
+          <div>NORTH (NORTHERN BEACHES) MEET AT:</div>
+          <div>C3 OXFORD FALLS, 6:30PM EVERY FRIDAY</div>
+          <div>WEST (WEST SYDNEY) MEET AT:</div>
+          <div>C3 SILVERWATER, 6:30PM EVERY FRIDAY</div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      Paperback gives things a white paper background and contains the information about each term
+
+      TODO: Change the contents of this element in between terms.  
+    -->
+    <div class="paperback">
+      <div class="writing">
+          <div class="campaignTitle"> DATES</div>
+
+          <!--
+            An "event" div contains information for each week's event
+          -->
+          <div class="event">
+            <div class="title">05/02 : CONNECT NIGHT</div>
+            <div class="description">
+              Youth Online Cinema Experience
+            </div>
+            <div class="description">
+              Ps. Eloise Ditchfield preaching
+            </div>
+            <div class="description">
+              Bring gold coin for pizza/drink 🍕 dinner
+            </div>
+            <div class="description">Connect Group Breakouts</div>
+          </div>
+
+          <div class="event">
+            <div class="title">12/02 : HUB x VALENTINES NIGHT </div>
+            <div class="description">
+              LOCATION OVERSEERS TAG TEAM @ NORTH
+            </div>
+            <div class="description">
+              STUDENT PREACHERS @ WEST
+            </div>
+            <div class="description">
+              Dress Up Wearing  Red 🌷🌷🌷
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="title">19/02 : CONNECT NIGHT</div>
+
+            <div class="description">
+              Youth Online Cinema Experience
+            </div>
+            <div class="description">
+              Ps. Jesse Ditchfield Preaching 
+            </div>
+            <div class="description">
+              Bring gold coin for Pizza/Drink 🍕 dinner
+            </div>
+            <div class="description">Connect Group Breakouts</div>
+          </div>
+
+          <div class="event">
+            <div class="title">26/02 : HUB NIGHT x TRADIE DRESS UP </div>
+            <div class="description">
+              Student Preachers  + Bunnings bbq Dinner @ North
+            </div>
+            <div class="description">
+              Emily Antcliff preaching @ WEST
+            </div>
+            <div class="description">
+              Dress up as a builder/tradie 👷 🚧 (e.g. Hi-Vis Vest, Tool Belt, Hard Hat)
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!--
+      This is the hub night logo that spins when the user scrolls.
+      The spinning is done in the Term1.js file by the window.onScroll event
+    -->
+    <img id="CIRCLESPIN" src="./images/hubnight.PNG">
+
+  </div>
+
+
+  <!--
+    TODO: Change class name from crossRoads -> SecondHalf
+
+    This div begins the second campaign for the term.  
+    Something to note is the parallax effect on the background image is disabled on mobile because making it work on 
+    smaller screens was tricky.  
+    
+    TODO: make parallax work on mobile?
+  -->
+  <div class="crossRoads center">
+  </div>
+
+  <div class="info topShadow">
+    <div class="paperback">
+      <div class="writing">
+          <div class="campaignTitle"> DATES</div>
+
+          <div class="event">
+            <div class="title">05/03 : Connect Night</div>
+            <div class="description">Leaders Panel</div>
+            <div class="description">
+              Bring gold coin for Pizza/Drink 🍕 dinner
+            </div>
+            <div class="description">Connect Group Breakouts</div>
+          </div>
+
+          <div class="event">
+            <div class="title">12/03 : HUB X NEON NIGHT</div>
+            <div class="description">Lollie Trolley & Rollerblade Ring @ NORTH </div>
+            <div class="description">Student Preachers @ WEST </div>
+            <div class="description">Wear <span class="fluroFlash">fluro clothing</span></div>
+          </div>
+
+          <div class="event">
+            <div class="title">19/03 : CONNECT NIGHT x HOODIE DRESS - UP</div>
+            <div class="description">Emily Antcliff preaching</div>
+            <div class="description"> Bring gold coin for Pizza/Drink 🍕 dinner</div>
+            <div class="description">Wear your favourite comfy hoodie 🛌 </div>
+            <div class="description">Connect Group Breakouts</div>
+          </div>
+
+          <div class="event">
+            <div class="title">26/03 : HUB X DOUBLE DENIM NIGHT</div>
+            <div class="description">Silent disco</div>
+            <div class="description">Wear Denim or double denim 👖👖</div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- This applies the code in Term1.js to this page-->
+  <script src="Term2.js"></script>
+</body>
+</html>

@@ -47,15 +47,10 @@ body{
         width: 90%;
         height: 80%;
         
-        display:flex;
-        justify-content: flex-start;
-        align-items: center;
-        
         background-attachment:local;
         background-position: center;
         background-size: cover;
 
-        color: #FEFEFE;
         font-family: "Lemon";
         font-size: 1.5rem;
 
@@ -64,9 +59,19 @@ body{
         transition: all 0.2s ease-in, padding 0.2s ease-in 0.1s;
         box-shadow: 0px 8px 6px -6px black;
 
-        padding-left: 1em;
-
         cursor: pointer;
+    }
+    .door a{
+        text-decoration: none;
+        width: 100%;
+        height:100%;
+
+
+        padding-left: 1em;
+        color: #FEFEFE;
+
+        display: flex;
+        align-items: center;
     }
     .panel{
         width:100%;
@@ -121,16 +126,11 @@ body{
         background-color: #333;
         height:calc(100% - var(--fullPad)*2);
         
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         
         background-attachment:local;
         background-position: center;
         background-size: cover;
 
-        color: #FEFEFE;
         font-family: "Lemon";
         font-size: 1.7vw;
 
@@ -142,6 +142,18 @@ body{
 
 
         cursor: pointer;
+    }
+    .door a{
+        text-decoration: none;
+        width: 100%;
+        height:100%;
+
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        color: #FEFEFE;
     }
 
     .layout{
@@ -219,9 +231,6 @@ body{
 }
 
 
-a{
-    text-decoration: none;
-}
 
 
 
